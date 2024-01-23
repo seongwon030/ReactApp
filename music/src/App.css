@@ -33,7 +33,14 @@
 .App .test {
   margin-top: 100px;
   text-align: center;
+  margin-bottom: 100px;
 }
 
+.App .text4 {
+  text-align: center;
+  font-size: small;
+  color: gray;
+  margin-top: 70px;
+}
 
 

@@ -24,6 +24,10 @@ function App() {
       <div className='test'>
         <button>테스트 시작하기</button>
       </div>
+      <hr/>
+      <div className='text4'>
+        <h3>친구와 함께 취향을 알아봐요!</h3>
+      </div>
     </div>
   );
 }
