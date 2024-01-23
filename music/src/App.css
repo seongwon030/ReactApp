@@ -1,0 +1,39 @@
+.App {
+  margin-top: 100px;
+}
+
+.App .sound {
+  text-align: right;
+  margin-right: 15%;
+  margin-bottom: 70px;
+}
+
+.App .text1 {
+  text-align: center;
+  line-height: 50%;
+  margin-bottom: 30px;
+}
+
+.App .text2 {
+  text-align: center;
+  line-height: 50%;
+  margin-bottom: 50px;
+  color: gray;
+  
+}
+
+.App .text3 {
+  text-align: center;
+  line-height: 10%;
+  font-size: small;
+  color: gray;
+  margin-bottom: 50px;
+}
+
+.App .test {
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+
