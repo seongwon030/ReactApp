@@ -1,16 +1,33 @@
+import { useRef, useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(new Audio('./ex.mp3'));
+
+  const playMusic = () => {
+    const audio = audioRef.current;
+
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+
+    setIsPlaying(!isPlaying);
+  }
   return (
     <div className="App">
       <div className='sound'>
-        <button>
-          <img src="./sound.png"/>
+        <button onClick={playMusic}>
+          <img src="./sound.png" alt='Sound Icon'/>
         </button>
       </div>
       <div className='text1'>
         <h2>음악 장르의 취향,</h2>
-        <h2><span style={{fontStyle: 'italic', textShadow: '0 0 5px #aebbc2'}}>사운드</span>와 함께 알아보기</h2>
+        <h2><span style={{fontStyle: 'italic', textShadow: '0 0 5px #848484'}}>사운드</span>와 함께 알아보기</h2>
       </div>
       <div className='text2'>
         <h3>소리가 첨부된 음악테스트를 통해</h3>
