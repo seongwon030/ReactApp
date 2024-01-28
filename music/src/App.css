@@ -2,24 +2,19 @@
   margin-top: 100px;
 }
 
-.App .sound {
+.sound {
   text-align: right;
   margin-right: 15%;
   margin-bottom: 70px;
 }
 
-.App .sound button {
-  background-color: white;
-  border-color: white;
-}
-
-.App .text1 {
+.text1 {
   text-align: center;
   line-height: 50%;
   margin-bottom: 30px;
 }
 
-.App .text2 {
+.text2 {
   text-align: center;
   line-height: 50%;
   margin-bottom: 50px;
@@ -27,7 +22,7 @@
   
 }
 
-.App .text3 {
+.text3 {
   text-align: center;
   line-height: 10%;
   font-size: small;
@@ -35,24 +30,31 @@
   margin-bottom: 50px;
 }
 
-.App .test {
+.test {
   margin-top: 80px;
   text-align: center;
   margin-bottom: 80px;
 }
 
-.App .test button {
+.test button {
   background-color: gray;
   padding: 10px 40px;
   font-size: medium;
   color: whitesmoke;
 }
 
-.App .text4 {
+.text4 {
   text-align: center;
   font-size: small;
   color: gray;
   margin-top: 70px;
 }
 
+.share {
+  margin-top: 50px;
+  text-align: center;
+}
 
+.share img {
+  margin-right: 30px;
+}

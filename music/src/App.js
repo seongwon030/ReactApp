@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import './App.css';
 
+
 function App() {
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -20,9 +21,8 @@ function App() {
   return (
     <div className="App">
       <div className='sound'>
-        <button onClick={playMusic}>
-          <img src="./sound.png" alt='Sound Icon'/>
-        </button>
+          <img onClick={playMusic} src="./sound.png" alt='Sound Icon'npm/>
+        
       </div>
       <div className='text1'>
         <h2>음악 장르의 취향,</h2>
@@ -43,6 +43,17 @@ function App() {
       <hr/>
       <div className='text4'>
         <h3>친구와 함께 취향을 알아봐요!</h3>
+      </div>
+      <div className='share'>
+        <a href="https://www.facebook.com">
+          <img src="./fb.png" alt="Facebook 1"/>
+        </a>
+        <a href="https://www.instagram.com">
+          <img src="./insta.png" alt="Instagram 1"/>
+        </a>
+        <a href="https://www.twitter.com">
+          <img src="./twit.png" alt="Twitter 1"/>
+        </a>
       </div>
     </div>
   );
