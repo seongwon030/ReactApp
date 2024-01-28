@@ -13,7 +13,6 @@ function App() {
       audio.play();
     } else {
       audio.pause();
-      audio.currentTime = 0;
     }
 
     setIsPlaying(!isPlaying);
