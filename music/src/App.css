@@ -1,6 +1,10 @@
+/* App */
+
 .App {
   margin-top: 100px;
 }
+
+/* Main */
 
 .sound {
   text-align: right;
@@ -51,7 +55,7 @@
 }
 
 .share {
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 
