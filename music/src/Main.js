@@ -30,10 +30,7 @@ const Main = () => {
         // audio.currenTime = 0 // 클릭하면 다시 처음으로 
     };
 
-    // const onClickFb = () => {
-    //     window.open("https://www.facebook.com/sharer/sharer.php?u=https://naver.com/")
-    // }
-    
+    const currentUrl = window.location.href; // 임시 url
 
     return (
         <div className="New">
@@ -63,13 +60,13 @@ const Main = () => {
                 <h3>친구와 함께 취향을 알아봐요!</h3>
             </div>
             <div className='share'>
-                <FacebookShareButton style={{ marginRight: "20px" }} url={"/"}>
+                <FacebookShareButton style={{ marginRight: "20px" }} url={currentUrl}>
                     <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
                 </FacebookShareButton>
-                <TwitterShareButton style={{ marginRight: "20px" }} url="/">
+                <TwitterShareButton style={{ marginRight: "20px" }} url={currentUrl}>
                     <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
                 </TwitterShareButton>
-                <LineShareButton style={{ marginRight: "20px" }} url={"/"}>
+                <LineShareButton style={{ marginRight: "20px" }} url={currentUrl}>
                     <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
                 </LineShareButton>
             </div>
