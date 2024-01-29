@@ -1,6 +1,17 @@
 import React from "react";
 import { useState,useRef } from "react";
 import { Link } from "react-router-dom";
+import './App.css';
+
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    LineShareButton,
+    LineIcon,
+
+} from "react-share"
 
 const Main = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -18,6 +29,12 @@ const Main = () => {
         setIsPlaying(!isPlaying);
         // audio.currenTime = 0 // 클릭하면 다시 처음으로 
     };
+
+    // const onClickFb = () => {
+    //     window.open("https://www.facebook.com/sharer/sharer.php?u=https://naver.com/")
+    // }
+    
+
     return (
         <div className="New">
             <div className='sound'>
@@ -46,15 +63,15 @@ const Main = () => {
                 <h3>친구와 함께 취향을 알아봐요!</h3>
             </div>
             <div className='share'>
-                <a href="https://www.facebook.com">
-                <img src="./fb.png" alt="Facebook 1"/>
-                </a>
-                <a href="https://www.instagram.com">
-                <img src="./insta.png" alt="Instagram 1"/>
-                </a>
-                <a href="https://www.twitter.com">
-                <img src="./twit.png" alt="Twitter 1"/>
-                </a>
+                <FacebookShareButton style={{ marginRight: "20px" }} url={"/"}>
+                    <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
+                </FacebookShareButton>
+                <TwitterShareButton style={{ marginRight: "20px" }} url="/">
+                    <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
+                </TwitterShareButton>
+                <LineShareButton style={{ marginRight: "20px" }} url={"/"}>
+                    <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
+                </LineShareButton>
             </div>
         </div>
     );
