@@ -1,9 +1,15 @@
 import React from "react"
+import { Link } from "react-router-dom";
+
+import './App.css';
 
 const FirstPage = () => {
     return (
         <div className="firstPage">
-            seongwon
+            <Link to="/">
+                <img src="./back.png" alt="back"></img>
+            </Link>
+            
         </div>
     );
 };
