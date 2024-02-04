@@ -2,6 +2,8 @@ import React from "react";
 import {useState, useRef} from "react";
 import { Link } from "react-router-dom";
 
+import CheckBox from "./CheckBox";
+
 import './App.css';
 
 const FirstPage = () => {
@@ -30,6 +32,7 @@ const FirstPage = () => {
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>1번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox/>
             </div>
         </div>
     );
