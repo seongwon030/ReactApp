@@ -26,13 +26,18 @@ const FirstPage = () => {
 
     return (
         <div className="firstPage">
-            <Link to="/">
+            <Link to="/"> 
                 <img src="./back.png" alt="back"></img>
             </Link>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>1번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox/>
+                <CheckBox id="checkbox1"/>
+            </div>
+            <div className="num1">
+                <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
+                <h3>1번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox2"/>
             </div>
         </div>
     );

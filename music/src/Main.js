@@ -5,6 +5,7 @@ import './App.css';
 
 import { useScript } from './hooks';
 
+
 import {
     FacebookShareButton,
     FacebookIcon,
@@ -70,6 +71,7 @@ const Main = () => {
     };
 
     return (
+        
         <div className="New">
             <div className='sound'>
                 <img onClick={playMusic} src="./sound.png" alt='Sound Icon'/>

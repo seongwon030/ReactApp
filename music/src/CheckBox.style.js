@@ -13,16 +13,17 @@ const CheckBoxCnt = styled.div`
         font: 0.6rem 'Noto Sans KR';
         text-align: center;
         background: #f5f6f7;
-        border: 1px solid #ddd;
+        border: 1px solid white;
         padding: 6px 9px;
         box-sizing: border-box;
         cursor: pointer;
+        border-radius: 30px;
     }
 
     input[type=checkbox]:checked + label {
         background-image: none;
-        background: #f3fbff;
-        border: 1px solid #76d5ff;
+        background: red;
+        border: 1px solid white;
         padding: 6px 10px;
         box-sizing: border-box;
         cursor: pointer;
