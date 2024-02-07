@@ -1,31 +1,23 @@
+// CheckBox.js
 import React, { useEffect, useState } from "react";
 import CheckBoxCnt from "./CheckBox.style";
 import './App.css';
 
+const CheckBox = ({ id }) => {
+    const [checkedValues, setCheckedValues] = useState([]);
 
-const CheckBox = ({id}) => {
-
-    const [value,setValue] = useState('');
-
-    function checkOnlyOne(e) {
-        console.log(e.target.id);
-        document.getElementsByName('checkWrap').forEach((el) => {
-
-            el.checked = false;
-        });
-        e.target.checked = true;
-        setValue(e.target.value);
+    const checkOnlyOne = (e, num) => {
+        setCheckedValues([num]);
     }
 
-    useEffect(()=>{
-        console.log(value);
-    },[value]);
+    useEffect(() => {
+        console.log(checkedValues);
+    }, [checkedValues]);
 
     const generateUniqueId = (name) => `${id}_${name}`;
 
-
     return (
-        <CheckBoxCnt>
+        <CheckBoxCnt id={`checkBoxCnt_${id}`}>
             {[1, 2, 3, 4, 5, 6, 7].map((num) => (
                 <React.Fragment key={num}>
                     <input
@@ -33,9 +25,10 @@ const CheckBox = ({id}) => {
                         id={generateUniqueId(`b${num}`)}
                         name="checkWrap"
                         value={num}
-                        onChange={(e) => checkOnlyOne(e)}
+                        checked={checkedValues.includes(num)}
+                        onChange={(e) => checkOnlyOne(e, num)}
                     />
-                    <label htmlFor={generateUniqueId(`b${num}`)}>디자인</label>
+                    <label htmlFor={generateUniqueId(`b${num}`)}>{num}</label>
                 </React.Fragment>
             ))}
         </CheckBoxCnt>
