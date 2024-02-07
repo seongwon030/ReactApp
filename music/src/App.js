@@ -3,6 +3,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 import Main from './Main';
 import FirstPage from './FirstPage';
+import SecondPage from './SecondPage';
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='FirstPage' element={<FirstPage/>} />
+          <Route path='SecondPage' element={<SecondPage/>} />
         </Routes>
       </BrowserRouter>
     </div>

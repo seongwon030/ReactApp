@@ -64,7 +64,7 @@ const Main = () => {
 		}
 	}, [status]);	    
 
-    const handleKakaoButton = () => {
+    const handleKakaoButton = () => { 
         window.Kakao.Link.sendScrap({
             requestUrl: currentUrl,
         });
