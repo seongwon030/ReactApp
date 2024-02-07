@@ -17,6 +17,7 @@ import {
 } from "react-share"
 
 import styled from "styled-components";
+import KAKAO_KEY from "./key";
 
 const KakaoShareButton = styled.a`
     cursor: pointer;
@@ -59,7 +60,7 @@ const Main = () => {
 			// 중복 initialization 방지
 			if (!window.Kakao.isInitialized()) {
 				// 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-				window.Kakao.init("00de026e315edfffd612d83e0fbce361");
+				window.Kakao.init(KAKAO_KEY);
 			}
 		}
 	}, [status]);	    
