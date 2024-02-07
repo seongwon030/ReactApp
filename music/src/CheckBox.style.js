@@ -22,7 +22,7 @@ const CheckBoxCnt = styled.div`
 
     input[type=checkbox]:checked + label {
         background-image: none;
-        background: gray;
+        background: red;
         border: 1px solid white;
         padding: 6px 10px;
         box-sizing: border-box;

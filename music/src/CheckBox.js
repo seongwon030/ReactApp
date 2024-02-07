@@ -18,7 +18,7 @@ const CheckBox = ({ id }) => {
 
     return (
         <CheckBoxCnt id={`checkBoxCnt_${id}`}>
-            {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+            {[1, 2, 3, 4, 5].map((num) => (
                 <React.Fragment key={num}>
                     <input
                         type="checkbox"
