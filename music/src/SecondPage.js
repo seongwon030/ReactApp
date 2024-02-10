@@ -24,6 +24,7 @@ const SecondPage = () => {
 감정 속에 잠긴 보컬의 고요한 음색 때문에 나도 모르게 분위기에 취하게 돼.</h3>
                 <CheckBox id="checkbox6"/>
             </div>
+            
             <div className='linkBox'>
                 <Link to="/firstPage">
                     <button>이전으로</button> 

@@ -1,32 +1,38 @@
-// CheckBox.js
 import React, { useEffect, useState } from "react";
 import CheckBoxCnt from "./CheckBox.style";
 import './App.css';
 
 const CheckBox = ({ id }) => {
-    const [checkedValues, setCheckedValues] = useState([]);
+    const [checkedValue, setCheckedValue] = useState(null);
 
-    const checkOnlyOne = (e, num) => {
-        setCheckedValues([num]);
-    }
-
-    useEffect(() => {
-        console.log(checkedValues);
-    }, [checkedValues]);
+    const checkOnlyOne = (num) => {
+        setCheckedValue((prevCheckedValue) => {
+            // 이미 선택된 값이면 아무것도 반환하지 않음
+            if (prevCheckedValue === num) {
+                return num;
+            }
+            // 선택된 값이 없거나 다른 값이면 현재 값으로 설정
+            return num;
+        });
+    };
+    
+    useEffect(() => { // 체크할 때 체크박스 id와 num 콘솔에 출력
+        console.log(id, checkedValue);  
+    }, [id,checkedValue]);
 
     const generateUniqueId = (name) => `${id}_${name}`;
 
     return (
         <CheckBoxCnt id={`checkBoxCnt_${id}`}>
-            {[1, 2, 3, 4, 5].map((num) => (
+            {[1,2,3,4,5].map((num) => (
                 <React.Fragment key={num}>
                     <input
                         type="checkbox"
                         id={generateUniqueId(`b${num}`)}
                         name="checkWrap"
                         value={num}
-                        checked={checkedValues.includes(num)}
-                        onChange={(e) => checkOnlyOne(e, num)}
+                        checked={checkedValue === num}
+                        onChange={() => checkOnlyOne(num)}
                     />
                     <label htmlFor={generateUniqueId(`b${num}`)}>{num}</label>
                 </React.Fragment>
