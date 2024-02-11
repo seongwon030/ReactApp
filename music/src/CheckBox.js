@@ -3,11 +3,12 @@ import CheckBoxCnt from "./CheckBox.style";
 import './App.css';
 
 const CheckBox = ({ id }) => {
+    // 체크 상태 관리 
     const [checkedValue, setCheckedValue] = useState(null);
 
-    const checkOnlyOne = (num) => {
+    const checkOnlyOne = (num) => {  
         setCheckedValue((prevCheckedValue) => {
-            // 이미 선택된 값이면 아무것도 반환하지 않음
+            // 이미 선택된 값이면 현재값 반환
             if (prevCheckedValue === num) {
                 return num;
             }
@@ -22,8 +23,9 @@ const CheckBox = ({ id }) => {
 
     const generateUniqueId = (name) => `${id}_${name}`;
 
+
     return (
-        <CheckBoxCnt id={`checkBoxCnt_${id}`}>
+        <CheckBoxCnt id={`checkBoxCnt_${id}`} num={checkedValue} >
             {[1,2,3,4,5].map((num) => (
                 <React.Fragment key={num}>
                     <input
@@ -34,7 +36,9 @@ const CheckBox = ({ id }) => {
                         checked={checkedValue === num}
                         onChange={() => checkOnlyOne(num)}
                     />
-                    <label htmlFor={generateUniqueId(`b${num}`)}>{num}</label>
+                    <label 
+                    htmlFor={generateUniqueId(`b${num}`)}
+                    >{num}</label>
                 </React.Fragment>
             ))}
         </CheckBoxCnt>
