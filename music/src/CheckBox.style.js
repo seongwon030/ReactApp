@@ -27,12 +27,12 @@ const CheckBoxCnt = styled.div`
             switch (num) {
                 case 1:
                 case 2:
-                    return 'red';
+                    return 'crimson';
                 case 3:
                     return 'gray';
                 case 4:
                 case 5:
-                    return 'blue';
+                    return 'dodgerblue';
                 default:
                     return 'gray';
             }

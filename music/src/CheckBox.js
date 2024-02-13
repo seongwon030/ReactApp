@@ -5,7 +5,7 @@ import './App.css';
 const CheckBox = ({ id }) => {
     // 체크 상태 관리 
     const [checkedValue, setCheckedValue] = useState(null);
-
+    
     const checkOnlyOne = (num) => {  
         setCheckedValue((prevCheckedValue) => {
             // 이미 선택된 값이면 현재값 반환
