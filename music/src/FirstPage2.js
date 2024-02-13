@@ -2,13 +2,11 @@ import React from "react";
 import {useState, useRef} from "react";
 import { Link } from "react-router-dom";
 
-
 import CheckBox from "./CheckBox";
 
 import './App.css';
 
-
-const FirstPage = () => {
+const FirstPage2 = () => {
 
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(new Audio('./trap.mp3'));
@@ -30,31 +28,31 @@ const FirstPage = () => {
         <div className="firstPage">
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>1번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox1"/>
+                <h3>11번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox11"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>2번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox2"/>
+                <h3>12번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox12"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>3번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox3"/>
+                <h3>13번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox13"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>4번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox4"/>
+                <h3>14번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox14"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>5번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox5"/>
+                <h3>15번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox15"/>
             </div>
             <div className='test'>
-                <Link to="/FirstPage1">
+                <Link to="/FirstPage3">
                     <button>다음으로</button>  
                 </Link> 
             </div>
@@ -62,4 +60,4 @@ const FirstPage = () => {
     );
 };
 
-export default FirstPage;
+export default FirstPage2;

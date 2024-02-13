@@ -10,7 +10,7 @@ const CheckBoxCnt = styled.div`
     input[type=checkbox] + label {
         flex:1;
         display: inline-block;
-        margin: 4px;
+        margin: 10px;
         font: 1.2rem 'Noto Sans KR';
         text-align: center;
         background: #f5f6f7;
@@ -27,12 +27,12 @@ const CheckBoxCnt = styled.div`
             switch (num) {
                 case 1:
                 case 2:
-                    return 'crimson';
+                    return 'red';
                 case 3:
                     return 'gray';
                 case 4:
                 case 5:
-                    return 'dodgerblue';
+                    return 'blue';
                 default:
                     return 'gray';
             }
