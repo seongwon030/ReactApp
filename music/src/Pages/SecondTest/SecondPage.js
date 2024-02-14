@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import CheckBox from "./CheckBox";
+import CheckBox from "../../Components/CheckBox";
 
-import './App.css';
+import "../FirstTest/FirstPage.css";
 
 const SecondPage = () => {
 

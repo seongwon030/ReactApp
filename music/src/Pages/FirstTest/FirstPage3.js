@@ -1,12 +1,14 @@
 import React from "react";
 import {useState, useRef} from "react";
 import { Link } from "react-router-dom";
+import { Progress } from "@chakra-ui/progress";
+import { ChakraProvider } from "@chakra-ui/react";
 
-import CheckBox from "./CheckBox";
+import CheckBox from "../../Components/CheckBox";
 
-import './App.css';
+import "./FirstPage.css";
 
-const FirstPage2 = () => {
+const FirstPage3 = () => {
 
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(new Audio('./trap.mp3'));
@@ -25,39 +27,42 @@ const FirstPage2 = () => {
     };
 
     return (
+        <ChakraProvider>
         <div className="firstPage">
+            <Progress value={80} size='md' colorScheme='green' />
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>11번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox11"/>
+                <h3>16번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox16"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>12번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox12"/>
+                <h3>17번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox17"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>13번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox13"/>
+                <h3>18번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox18"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>14번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox14"/>
+                <h3>19번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox19"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
-                <h3>15번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox15"/>
+                <h3>20번 사운드가 당신의 마음에 드나요?</h3>
+                <CheckBox id="checkbox20"/>
             </div>
             <div className='test'>
-                <Link to="/FirstPage3">
+                <Link to="/FirstPage4">
                     <button>다음으로</button>  
                 </Link> 
             </div>
         </div>
+        </ChakraProvider>
     );
 };
 
-export default FirstPage2;
+export default FirstPage3;

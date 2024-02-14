@@ -1,10 +1,12 @@
 import React from "react";
 import {useState, useRef} from "react";
 import { Link } from "react-router-dom";
+import { Progress } from "@chakra-ui/progress";
+import { ChakraProvider } from "@chakra-ui/react";
 
-import CheckBox from "./CheckBox";
+import CheckBox from "../../Components/CheckBox";
 
-import './App.css';
+import "./FirstPage.css";
 
 const FirstPage4 = () => {
 
@@ -25,7 +27,9 @@ const FirstPage4 = () => {
     };
 
     return (
+        <ChakraProvider>
         <div className="firstPage">
+            <Progress value={100} size='md' colorScheme='green' />
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>21번 사운드가 당신의 마음에 드나요?</h3>
@@ -52,11 +56,12 @@ const FirstPage4 = () => {
                 <CheckBox id="checkbox25"/>
             </div>
             <div className='test'>
-                <Link to="/FirstPage2">
+                <Link to="">
                     <button>다음으로</button>  
                 </Link> 
             </div>
         </div>
+        </ChakraProvider>
     );
 };
 

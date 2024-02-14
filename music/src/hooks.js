@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 function useScript(src) {
     // Keep track of script status ("idle", "loading", "ready", "error")
     const [status, setStatus] = useState(src ? "loading" : "idle");

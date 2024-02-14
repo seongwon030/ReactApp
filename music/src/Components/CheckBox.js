@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CheckBoxCnt from "./CheckBox.style";
-import './App.css';
+import '../App.css';
 
 const CheckBox = ({ id }) => {
     // 체크 상태 관리 

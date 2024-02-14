@@ -1,10 +1,9 @@
 import React from "react";
 import { useEffect,useState,useRef } from "react";
 import { Link } from "react-router-dom";
-import './App.css';
+import '../../App.css';
 
-import { useScript } from './hooks';
-
+import { useScript } from '../../hooks';
 
 import {
     FacebookShareButton,
@@ -17,7 +16,7 @@ import {
 } from "react-share"
 
 import styled from "styled-components";
-import KAKAO_KEY from "./key";
+import KAKAO_KEY from "../../Components/key";
 
 const KakaoShareButton = styled.a`
     cursor: pointer;
