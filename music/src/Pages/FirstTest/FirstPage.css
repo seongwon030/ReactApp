@@ -1,6 +1,5 @@
 /* 첫번째설문 페이지 버튼 이미지 */
 .firstPage img {
-    margin-left: 20px;
     margin-bottom: 10px;
   }
   
@@ -50,3 +49,10 @@
     color: whitesmoke;
   }
   
+
+/* Progress 바 */
+
+.progress {
+  margin-left: 150px;
+  margin-right: 150px;
+}
