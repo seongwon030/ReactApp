@@ -1,4 +1,5 @@
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import "../Components/ScrollToTop";
 
 import Main from '../Pages/Main/Main';
 import FirstPage from '../Pages/FirstTest/FirstPage';
@@ -7,10 +8,12 @@ import FirstPage2 from '../Pages/FirstTest/FirstPage2';
 import FirstPage3 from '../Pages/FirstTest/FirstPage3';
 import FirstPage4 from '../Pages/FirstTest/FirstPage4';
 import SecondPage from '../Pages/SecondTest/SecondPage';
+import ScrollToTop from '../Components/ScrollToTop';
 
 export const Routers = () => {
     return (
     <BrowserRouter>
+        <ScrollToTop/>
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='FirstPage' element={<FirstPage/>} />
