@@ -3,7 +3,7 @@ import { useEffect,useState,useRef } from "react";
 import { Link } from "react-router-dom";
 import '../../App.css';
 
-import { useScript } from '../../hooks';
+import { useScript } from './hooks';
 
 import {
     FacebookShareButton,
