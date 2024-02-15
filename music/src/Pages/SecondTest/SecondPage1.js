@@ -13,7 +13,7 @@ const SecondPage1 = () => {
         <ChakraProvider>
         <div className="firstPage">
             <div className="progress">
-                <Progress value={20} size='md' colorScheme='green' />
+                <Progress value={40} size='md' colorScheme='green' />
             </div>
             <div className="num2">
                 <h3>Q. 쿵! 짝! 쿵! 짝! 4/4박자로 마치 내 발걸음과 같은 이 비트와 에너지 넘치는 보컬.. 
