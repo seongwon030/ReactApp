@@ -13,8 +13,8 @@
     align-items: center;
     height: 25vh; 
     margin-top: 50px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
   }
   
   .num2 {
@@ -53,6 +53,6 @@
 /* Progress 바 */
 
 .progress {
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 80px;
+  margin-right: 80px;
 }

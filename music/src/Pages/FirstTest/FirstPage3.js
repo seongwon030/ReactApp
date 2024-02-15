@@ -29,7 +29,9 @@ const FirstPage3 = () => {
     return (
         <ChakraProvider>
         <div className="firstPage">
+            <div className="progress">
             <Progress value={80} size='md' colorScheme='green' />
+            </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>16번 사운드가 당신의 마음에 드나요?</h3>

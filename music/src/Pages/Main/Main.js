@@ -3,6 +3,7 @@ import { useEffect,useState,useRef } from "react";
 import { Link } from "react-router-dom";
 import '../../App.css';
 
+import styled from "styled-components";
 import { useScript } from './hooks';
 
 import {
@@ -15,7 +16,6 @@ import {
 
 } from "react-share"
 
-import styled from "styled-components";
 import KAKAO_KEY from "../../Components/key";
 
 const KakaoShareButton = styled.a`
