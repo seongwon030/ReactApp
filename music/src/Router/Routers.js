@@ -16,6 +16,8 @@ import SecondPage2 from '../Pages/SecondTest/SecondPage2';
 import SecondPage3 from '../Pages/SecondTest/SecondPage3';
 import SecondPage4 from '../Pages/SecondTest/SecondPage4';
 
+// 라우터 hook
+
 export const Routers = () => {
     return (
     <BrowserRouter>
