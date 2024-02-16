@@ -6,6 +6,7 @@ const CheckBox = ({ id }) => {
     // 체크 상태 관리 
     const [checkedValue, setCheckedValue] = useState(null);
     
+    // 중복 선택 안되게
     const checkOnlyOne = (num) => {  
         setCheckedValue((prevCheckedValue) => {
             // 이미 선택된 값이면 현재값 반환
