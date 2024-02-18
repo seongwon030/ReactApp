@@ -1,5 +1,5 @@
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import "../Components/ScrollToTop";
+import { RecoilRoot } from 'recoil';
 
 import Main from '../Pages/Main/Main';
 import ScrollToTop from '../Components/ScrollToTop';
@@ -20,6 +20,7 @@ import SecondPage4 from '../Pages/SecondTest/SecondPage4';
 
 export const Routers = () => {
     return (
+    <RecoilRoot>
     <BrowserRouter>
         <ScrollToTop/>
         <Routes>
@@ -36,5 +37,6 @@ export const Routers = () => {
           <Route path='SecondPage4' element={<SecondPage4/>} />
         </Routes>
       </BrowserRouter>
+      </RecoilRoot>
     );
 }
