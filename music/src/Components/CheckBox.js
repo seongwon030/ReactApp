@@ -21,23 +21,27 @@ const CheckBox = ({ id }) => {
     });
   };
 
-  useEffect(()=>{
-    const handleCheckboxChange = () =>{ // 체크박스 상태 변경 시 콘솔에 출력 
-      console.log(id,checkedValues[id]);
+  useEffect(() => {
+    const handleCheckboxChange = () => {
+      console.log(id, checkedValues[id]);
     };
-
-    document.getElementById(`checkBoxCnt_${id}`).addEventListener(
-      'change',handleCheckboxChange);
-
-    return() => {
-      document.getElementById(`checkBoxCnt_${id}`).removeEventListener(
-        'change',handleCheckboxChange);
   
+    const checkboxElement = document.getElementById(`checkBoxCnt_${id}`);
+  
+    if (checkboxElement) {
+      checkboxElement.addEventListener('change', handleCheckboxChange);
     }
-  },[checkedValues,id]);
+  
+    return () => {
+      if (checkboxElement) {
+        checkboxElement.removeEventListener('change', handleCheckboxChange);
+      }
+    };
+  }, [checkedValues, id]);
+  
 
   const generateUniqueId = (name) => `${id}_${name}`;
-
+ 
   return (
     <CheckBoxCnt id={`checkBoxCnt_${id}`} num={checkedValues[id]}>
       {[1, 2, 3, 4, 5].map((num) => (
