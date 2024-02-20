@@ -3,6 +3,7 @@ import CheckBoxCnt from "./CheckBox.style";
 import "../App.css";
 import { atom } from "recoil";
 import { useRecoilState } from "recoil";
+import { useEffect } from "react";
 
 
 export const checkValueState = atom({
@@ -20,9 +21,20 @@ const CheckBox = ({ id }) => {
     });
   };
 
-//   useEffect(() => {
-//     console.log(id, checkedValues[id]);
-//   }, [id, checkedValues]);
+  useEffect(()=>{
+    const handleCheckboxChange = () =>{
+      console.log(id,checkedValues[id]);
+    };
+
+    document.getElementById(`checkBoxCnt_${id}`).addEventListener(
+      'change',handleCheckboxChange);
+
+    return() => {
+      document.getElementById(`checkBoxCnt_${id}`).removeEventListener(
+        'change',handleCheckboxChange);
+  
+    }
+  },[checkedValues,id]);
 
   const generateUniqueId = (name) => `${id}_${name}`;
 
