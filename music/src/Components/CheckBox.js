@@ -22,7 +22,7 @@ const CheckBox = ({ id }) => {
   };
 
   useEffect(()=>{
-    const handleCheckboxChange = () =>{
+    const handleCheckboxChange = () =>{ // 체크박스 상태 변경 시 콘솔에 출력 
       console.log(id,checkedValues[id]);
     };
 
