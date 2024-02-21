@@ -5,13 +5,16 @@
   
   /* 첫 번째 페이지 체크박스 */
   .num1 {
-    border : 1px solid white;
+    background-color: #8BBF9F;
+    border : 0.5px solid white;
+    border-radius: 10px;
+    border-top-color: gray;
     border-bottom-color: gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 25vh; 
+    height: 22vh; 
     margin-top: 50px;
     margin-left: 80px;
     margin-right: 80px;
