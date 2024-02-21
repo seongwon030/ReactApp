@@ -30,7 +30,7 @@ const FirstPage4 = () => {
         <ChakraProvider>
         <div className="firstPage">
             <div className="progress">
-                <Progress value={100} size='md' colorScheme='green' />
+                <Progress value={50} size='md' colorScheme='purple' />
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>

@@ -37,6 +37,7 @@
     padding: 10px 40px;
     font-size: medium;
     color: whitesmoke;
+    border-radius: 30px;
   }
 
   .nextPage button:hover {

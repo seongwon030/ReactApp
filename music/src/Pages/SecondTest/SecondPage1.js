@@ -13,7 +13,7 @@ const SecondPage1 = () => {
         <ChakraProvider>
         <div className="firstPage">
             <div className="progress">
-                <Progress value={40} size='md' colorScheme='green' />
+                <Progress value={70} size='md' colorScheme='purple' />
             </div>
             <div className="num2">
                 <h3>Q. 해변에서 하이볼을 홀짝이며 흰모래사장에서 석양이 떠오르는 차분한 선율

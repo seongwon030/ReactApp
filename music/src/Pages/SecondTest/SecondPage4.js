@@ -13,7 +13,7 @@ const SecondPage4 = () => {
         <ChakraProvider>
         <div className="firstPage">
             <div className="progress">
-                <Progress value={100} size='md' colorScheme='green' />
+                <Progress value={100} size='md' colorScheme='purple' />
             </div>
             <div className="num2">
                 <h3>Q. 디지털한 사운드가 기반이 된 끈적한 사랑과 사회참여적인 가사를 담아낸 흑인들의 가사
