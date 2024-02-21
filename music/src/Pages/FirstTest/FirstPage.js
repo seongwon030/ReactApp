@@ -27,6 +27,8 @@ const FirstPage = () => {
         // audio.currenTime = 0 // 클릭하면 다시 처음으로 
     };
 
+    
+
     return (
         <ChakraProvider>
         <div className="firstPage">
@@ -58,7 +60,7 @@ const FirstPage = () => {
                 <h3>5번 사운드가 당신의 마음에 드나요?</h3>
                 <CheckBox id="checkbox5"/>
             </div>
-            <div className='test'>
+            <div className='nextPage'>
                 <Link to="/FirstPage1">
                     <button>다음으로</button>  
                 </Link> 

@@ -21,19 +21,23 @@
   }
   
   /* 다음으로 넘어가는 버튼 */
-  .linkBox {
+  .nextPage {
     margin-top: 80px;
     text-align: center;
     margin-bottom: 80px;
   }
   
-  .linkBox button {
+  .nextPage button {
     margin-right: 10px;
     margin-left: 10px;
     background-color: gray;
     padding: 10px 40px;
     font-size: medium;
     color: whitesmoke;
+  }
+
+  .nextPage button:hover {
+    background-color: rgb(100, 92, 92);
   }
   
 

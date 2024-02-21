@@ -57,7 +57,7 @@ const FirstPage2 = () => {
                 <h3>15번 사운드가 당신의 마음에 드나요?</h3>
                 <CheckBox id="checkbox15"/>
             </div>
-            <div className='test'>
+            <div className='nextPage'>
                 <Link to="/FirstPage3">
                     <button>다음으로</button>  
                 </Link> 
