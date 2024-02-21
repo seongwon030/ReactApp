@@ -72,7 +72,7 @@ const Main = () => {
 
     return (
         
-        <div className="New">
+        <div className="Main">
             <div className='sound'>
                 <img onClick={playMusic} src="./sound.png" alt='Sound Icon'/>
             </div>
