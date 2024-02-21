@@ -14,7 +14,7 @@ const CheckBoxCnt = styled.div`
         font: 1.5rem 'Noto Sans KR';
         text-align: center;
         background: #f5f6f7;
-        border: 1px solid gray;
+        border: 1px solid #8BBF9F;
         padding: 6px 9px;
         box-sizing: border-box;
         cursor: pointer;
@@ -27,14 +27,14 @@ const CheckBoxCnt = styled.div`
             switch (num) {
                 case 1:
                 case 2:
-                    return 'orangered';
+                    return '#D6BA73';
                 case 3:
-                    return 'gray';
+                    return 'lightgray';
                 case 4:
                 case 5:
-                    return 'royalblue';
+                    return '#857E7B';
                 default:
-                    return 'gray';
+                    return 'white';
             }
         }};
         border: 1px solid white;
