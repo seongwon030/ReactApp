@@ -89,7 +89,7 @@ const Main = () => {
                 <h4>이 테스트에는 많은 장르 중 대중적인 장르들을 선별하여 추천됩니다.</h4>
             </div>
             <hr/>
-            <div className='test'>
+            <div className='mainButton'>
                 <Link to="/firstPage">
                     <button>테스트 시작하기</button>  
                 </Link> 
