@@ -11,8 +11,7 @@
     background-color: #8BBF9F;
     border : 0.5px solid white;
     border-radius: 10px;
-    border-top-color: gray;
-    border-bottom-color: gray;
+    border-color: gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
