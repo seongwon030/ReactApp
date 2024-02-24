@@ -38,6 +38,10 @@ const CheckBox = ({ id }) => {
       }
     };
   }, [checkedValues, id]);
+
+  useEffect(() => {
+    console.log("All checkedValues:", checkedValues);
+  }, [checkedValues]);
   
 
   const generateUniqueId = (name) => `${id}_${name}`;
