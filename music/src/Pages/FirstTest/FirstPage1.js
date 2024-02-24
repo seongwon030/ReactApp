@@ -57,7 +57,7 @@ const FirstPage1 = () => {
                 <CheckBox id="checkbox10"/>
             </div>
             <div className='nextPage'>
-                <Link to="/FirstPage2">
+                <Link to="/secondPage">
                     <button>다음으로</button>  
                 </Link> 
             </div>
