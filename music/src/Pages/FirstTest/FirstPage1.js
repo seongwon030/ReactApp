@@ -34,27 +34,27 @@ const FirstPage1 = () => {
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>6번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox6"/>
+                <CheckBox id="Rock2"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>7번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox7"/>
+                <CheckBox id="RB1"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>8번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox8"/>
+                <CheckBox id="RB2"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>9번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox9"/>
+                <CheckBox id="Jazz1"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>10번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="checkbox10"/>
+                <CheckBox id="Jazz2"/>
             </div>
             <div className='nextPage'>
                 <Link to="/secondPage">
