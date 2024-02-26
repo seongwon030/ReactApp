@@ -4,10 +4,18 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Progress } from "@chakra-ui/progress";
 
 import CheckBox from "../../Components/CheckBox";
+import { PopValueState } from "../../Components/CheckBox";
+import { useRecoilValue } from "recoil";
 
 import "./SecondPage.css";
 
 const SecondPage4 = () => {
+
+    const AllCheckValue = useRecoilValue(PopValueState);
+
+    const completeButton = () => {
+        console.log(AllCheckValue);
+    };
 
     return (
         <ChakraProvider>
@@ -42,7 +50,7 @@ const SecondPage4 = () => {
             </div>
             <div className='linkBox'>
                 <Link to="">
-                    <button>완료</button> 
+                    <button onClick={completeButton}>완료</button> 
                 </Link> 
             </div>
         </div>
