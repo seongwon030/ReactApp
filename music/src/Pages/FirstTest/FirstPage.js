@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { Progress } from "@chakra-ui/progress";
 import { ChakraProvider } from '@chakra-ui/react';
 
-import CheckBox from "../../Components/CheckBox";
+import PopBox from "../../Components/PopBox";
+import HipBox from "../../Components/HipBox";
+import RockBox from "../../Components/RockBox";
 
 import "./FirstPage.css"
 
@@ -38,27 +40,27 @@ const FirstPage = () => {
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>1번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="Pop1"/>
+                <PopBox id="Pop1"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>2번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="Pop2"/>
+                <PopBox id="Pop2"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>3번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="Hip1"/>
+                <HipBox id="Hip1"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>4번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="Hip2"/>
+                <HipBox id="Hip2"/>
             </div>
             <div className="num1">
                 <img onClick={playMusic} src="./play.png" alt='Sound Icon'/>
                 <h3>5번 사운드가 당신의 마음에 드나요?</h3>
-                <CheckBox id="Rock1"/>
+                <RockBox id="Rock1"/>
             </div>
             <div className='nextPage'>
                 <Link to="/FirstPage1">
