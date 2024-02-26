@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 
 export const jazzValueState = atom({
-  key: "Rock",
+  key: "Jazz",
   default: {},
 });
 
