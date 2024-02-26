@@ -16,12 +16,9 @@ const RockBox = ({ id }) => {
 
   const checkOnlyOne = (num) => {
     setRockValueState((prevCheckedValues) => {
-      if (id.includes("Rock")) {
       const updatedValues = { ...prevCheckedValues, [id]: num };
       return updatedValues;
-    }
-  
-  });
+    });
   };
 
   useEffect(() => {

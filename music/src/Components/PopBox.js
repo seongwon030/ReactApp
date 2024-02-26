@@ -12,17 +12,15 @@ export const PopValueState = atom({
 });
 
 const PopBox = ({ id }) => {
-  const [popValues, setCheckedValues] = useRecoilState(PopValueState);
+  const [popValues, setPopValueState] = useRecoilState(PopValueState);
 
   const checkOnlyOne = (num) => {
-    setCheckedValues((prevCheckedValues) => {
-      if (id.includes("Pop")) {
+    setPopValueState((prevCheckedValues) => {
       const updatedValues = { ...prevCheckedValues, [id]: num };
       return updatedValues;
-    }
-
-  });
+    });
   };
+
 
   useEffect(() => {
     const handleCheckboxChange = () => {

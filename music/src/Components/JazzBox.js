@@ -16,12 +16,9 @@ const JazzBox = ({ id }) => {
 
   const checkOnlyOne = (num) => {
     setJazzValueState((prevCheckedValues) => {
-      if (id.includes("Jazz")) {
       const updatedValues = { ...prevCheckedValues, [id]: num };
       return updatedValues;
-    }
-    
-  });
+    });
   };
 
   useEffect(() => {

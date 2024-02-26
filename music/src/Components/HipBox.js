@@ -16,12 +16,9 @@ const HipBox = ({ id }) => {
 
   const checkOnlyOne = (num) => {
     setHipValueState((prevCheckedValues) => {
-      if (id.includes("Hip")) {
       const updatedValues = { ...prevCheckedValues, [id]: num };
       return updatedValues;
-    }
-
-  });
+    });
   };
 
   useEffect(() => {

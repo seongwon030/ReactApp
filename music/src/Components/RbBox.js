@@ -16,12 +16,9 @@ const RbBox = ({ id }) => {
 
   const checkOnlyOne = (num) => {
     setRbValueState((prevCheckedValues) => {
-      if (id.includes("RB")) {
       const updatedValues = { ...prevCheckedValues, [id]: num };
       return updatedValues;
-    }
-
-  });
+    });
   };
 
   useEffect(() => {
