@@ -13,7 +13,12 @@ import SecondPage2 from '../Pages/SecondTest/SecondPage2';
 import SecondPage3 from '../Pages/SecondTest/SecondPage3';
 import SecondPage4 from '../Pages/SecondTest/SecondPage4';
 
-// 라우터 hook
+import Pop from '../Pages/Result/Pop';
+import Jazz from '../Pages/Result/Jazz';
+import Hip from '../Pages/Result/Jazz';
+import Rock from '../Pages/Result/Rock';
+import Rb from '../Pages/Result/Rb';
+
 
 export const Routers = () => {
     return (
@@ -29,6 +34,11 @@ export const Routers = () => {
           <Route path='SecondPage2' element={<SecondPage2/>} />
           <Route path='SecondPage3' element={<SecondPage3/>} />
           <Route path='SecondPage4' element={<SecondPage4/>} />
+          <Route path='Pop' element={<Pop/>} />
+          <Route path='Jazz' element={<Jazz/>} />
+          <Route path='Hip' element={<Hip/>} />
+          <Route path='Rock' element={<Rock/>} />
+          <Route path='Rb' element={<Rb/>} />
         </Routes>
       </BrowserRouter>
       </RecoilRoot>
