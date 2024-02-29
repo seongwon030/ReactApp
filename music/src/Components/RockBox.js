@@ -38,11 +38,7 @@ const RockBox = ({ id }) => {
       }
     };
   }, [rockValues, id]);
-
-  useEffect(() => { 
-    console.log("Rock checkedValues:", rockValues);
-  }, [rockValues]);
-
+  
 
   const generateUniqueId = (name) => `${id}_${name}`;
 

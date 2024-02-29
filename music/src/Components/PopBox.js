@@ -40,10 +40,6 @@ const PopBox = ({ id }) => {
     };
   }, [popValues, id]);
 
-  useEffect(() => { 
-    console.log("All checkedValues:", popValues);
-  }, [popValues]);
-
 
   const generateUniqueId = (name) => `${id}_${name}`;
 

@@ -39,11 +39,7 @@ const RbBox = ({ id }) => {
     };
   }, [RbValues, id]);
 
-  useEffect(() => { 
-    console.log("RB checkedValues:", RbValues);
-  }, [RbValues]);
-
-
+  
   const generateUniqueId = (name) => `${id}_${name}`;
 
   return (

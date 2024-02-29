@@ -39,10 +39,6 @@ const HipBox = ({ id }) => {
     };
   }, [hipValues, id]);
 
-  useEffect(() => { 
-    console.log("Hip checkedValues:", hipValues);
-  }, [hipValues]);
-
 
   const generateUniqueId = (name) => `${id}_${name}`;
 
