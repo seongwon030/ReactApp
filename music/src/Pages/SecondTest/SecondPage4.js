@@ -5,17 +5,47 @@ import { Progress } from "@chakra-ui/progress";
 
 import RbBox from "../../Components/RbBox";
 import { PopValueState } from "../../Components/PopBox";
+import { HipValueState } from "../../Components/HipBox";
+import { JazzValueState } from "../../Components/JazzBox";
+import { RbValueState } from "../../Components/RbBox";
+import { RockValueState} from "../../Components/RockBox";
 import { useRecoilValue } from "recoil";
 
 import "./SecondPage.css";
 
 const SecondPage4 = () => {
 
-    const AllCheckValue = useRecoilValue(PopValueState);
+    const PopCheckValue = useRecoilValue(PopValueState);
+    const HipCheckValue = useRecoilValue(HipValueState);
+    const JazzCheckValue = useRecoilValue(JazzValueState);
+    const RbCheckValue = useRecoilValue(RbValueState);
+    const RockCheckValue = useRecoilValue(RockValueState);
+
+    const PopTotal = Object.values(PopCheckValue).reduce((sum,value)=> sum + value, 0);
+    const HipTotal = Object.values(HipCheckValue).reduce((sum,value)=> sum + value, 0);
+    const JazzTotal = Object.values(JazzCheckValue).reduce((sum,value)=> sum + value, 0);
+    const RbTotal = Object.values(RbCheckValue).reduce((sum,value)=> sum + value, 0);
+    const RockTotal = Object.values(RockCheckValue).reduce((sum,value)=> sum + value, 0);
+
+    const AllTotal = {
+        Pop: PopTotal,
+        Hip: HipTotal,
+        Jazz: JazzTotal,
+        Rb: RbTotal,
+        Rock: RockTotal,
+    };
+
+    const Result = Object.keys(AllTotal).reduce((max, genre) => {  // 최대값 가진 장르
+        return AllTotal[genre] > AllTotal[max] ? genre : max;
+    }, 'Pop')
+
+    const maxTotal = AllTotal[Result]; // 최대값
 
     const completeButton = () => {
-        console.log(AllCheckValue);
+        console.log("결과 :" , Result);
+        console.log("장르 :", maxTotal)
     };
+
 
     return (
         <ChakraProvider>
@@ -49,9 +79,9 @@ const SecondPage4 = () => {
                 <RbBox id="AlterRB1"/>
             </div>
             <div className='linkBox'>
-                <Link to="">
+                <Link to={`/${Result}`}>
                     <button onClick={completeButton}>완료</button> 
-                </Link> 
+                </Link>
             </div>
         </div>
         </ChakraProvider>
