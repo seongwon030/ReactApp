@@ -6,13 +6,13 @@ import { useRecoilState } from "recoil";
 import { useEffect } from "react";
 
 
-export const jazzValueState = atom({
+export const JazzValueState = atom({
   key: "Jazz",
   default: {},
 });
 
 const JazzBox = ({ id }) => {
-  const [jazzValues, setJazzValueState] = useRecoilState(jazzValueState);
+  const [jazzValues, setJazzValueState] = useRecoilState(JazzValueState);
 
   const checkOnlyOne = (num) => {
     setJazzValueState((prevCheckedValues) => {
@@ -38,10 +38,6 @@ const JazzBox = ({ id }) => {
       }
     };
   }, [jazzValues, id]);
-
-  useEffect(() => { 
-    console.log("Jazz checkedValues:", jazzValues);
-  }, [jazzValues]);
 
 
   const generateUniqueId = (name) => `${id}_${name}`;

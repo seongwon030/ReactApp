@@ -18,7 +18,7 @@ const SecondPage3 = () => {
             <div className="num2">
                 <h3>Q. 환상이 결합 된 환각적인 시공간을 넘나드는 듯한 실험적인 사운드
  지금 나는 내 다채로운 상상 속에만 존재하는 타임 트래블을 하고 싶어져.</h3>
-                <RockBox id="PsyRock1"/>
+                <RockBox id="ProRock1"/>
             </div>
             <div className="num2">
                 <h3>Q.  사회의 문제와 불만을 담아 소리지르듯 표현해주는 어둡고 강렬한 폭팔적인 사운드가 좋아.
