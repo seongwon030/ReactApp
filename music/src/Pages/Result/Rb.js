@@ -1,9 +1,50 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Result.css";
 import { ChakraProvider,VStack,Box,StackDivider } from "@chakra-ui/react";
 import { Progress } from "@chakra-ui/progress";
+import { RbValueState } from "../../Components/RbBox";
+import { useRecoilValue } from "recoil";
 
 const Rb = () => {
+    const RbValue = useRecoilValue(RbValueState);
+
+    useEffect(()=>{
+        console.log(RbValue); 
+    },[RbValue])
+
+    let Total = 0;
+    let NeoRb = 0;
+    let ComtemRb = 0;
+    let PunkRb = 0;
+    let SoulRb = 0;
+    let AlterRb = 0;
+
+    for (const key in RbValue) { // 하위장르 점수 합하기
+        if (key === 'NeoRB1' || key === 'NeoRB2') {
+            Total += RbValue[key];
+            NeoRb += RbValue[key];
+        } else if (key === 'ComRB1' || key === 'ComRB2') {
+            Total += RbValue[key];
+            ComtemRb += RbValue[key];
+        } else if (key === 'SoulRB1' || key === 'SoulRB2') {
+            Total += RbValue[key];
+            SoulRb += RbValue[key];
+        } else if (key === 'PunkRB1' || key === 'PunkRB2') {
+            Total += RbValue[key];
+            PunkRb += RbValue[key];
+        } else if (key === 'AlterRB1' || key === 'AlterRB2') {
+            Total += RbValue[key];
+            AlterRb += RbValue[key];
+        };
+    };
+
+    NeoRb = parseInt(NeoRb / Total * 100);
+    ComtemRb = parseInt(ComtemRb / Total * 100);
+    PunkRb = parseInt(PunkRb / Total * 100);
+    SoulRb = parseInt(SoulRb / Total * 100);
+    AlterRb = parseInt(AlterRb / Total * 100);
+
+
     return (
         <ChakraProvider>
         <div className="Top">
@@ -32,31 +73,31 @@ const Rb = () => {
             align='stretch'
             >
             <Box>
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={NeoRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     네오소울 <button>장르설명</button>
                 </div>
             </Box>
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={ComtemRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     컨템포러리 <button>장르설명</button>
                 </div>
             </Box>
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={PunkRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     펑크 <button>장르설명</button>
                 </div>
             </Box>
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={SoulRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     소울 <button>장르설명</button>
                 </div>
             </Box>
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={AlterRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     얼터너티브 <button>장르설명</button>
                 </div>
