@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Result.css";
 
-import { ChakraProvider,VStack,Box,StackDivider } from "@chakra-ui/react";
+import { ChakraProvider,VStack,Box,StackDivider, Flex } from "@chakra-ui/react";
 import { Progress } from "@chakra-ui/progress";
 import { PopValueState } from "../../Components/PopBox";
 import { useRecoilValue } from "recoil";
@@ -10,15 +10,48 @@ const Pop = () => {
 
     const PopValue = useRecoilValue(PopValueState);
 
+
     useEffect(()=>{
         console.log(PopValue);
-        console.log(Object.keys(PopValue));
-    },[PopValue])
+    },[PopValue]);
+    
+    let Total = 0;
+    let DancePop = 0;
+    let ElecPop = 0;
+    let IndiPop = 0;
+    let LatinPop = 0;
+    let BritPop = 0;
+
+    for (const key in PopValue) { // 하위장르 점수 합하기
+        if (key === 'DancePop1' || key === 'DancePop2') {
+            Total += PopValue[key];
+            DancePop += PopValue[key];
+        } else if (key === 'ElecPop1' || key === 'ElecPop2') {
+            Total += PopValue[key];
+            ElecPop += PopValue[key];
+        } else if (key === 'IndiPop1' || key === 'IndiPop2') {
+            Total += PopValue[key];
+            IndiPop += PopValue[key];
+        } else if (key === 'LatinPop1' || key === 'LatinPop2') {
+            Total += PopValue[key];
+            LatinPop += PopValue[key];
+        } else if (key === 'BritPop1' || key === 'BritPop2') {
+            Total += PopValue[key];
+            BritPop += PopValue[key];
+        };
+    };
+
+    console.log("전체값 : ",Total);
+    DancePop = parseInt(DancePop / Total * 100);
+    ElecPop = parseInt(ElecPop / Total * 100);
+    IndiPop = parseInt(IndiPop / Total * 100);
+    LatinPop = parseInt(LatinPop / Total * 100);
+    BritPop = parseInt(BritPop / Total * 100);
 
     return (
         <ChakraProvider>
         <div className="Top">
-            <h2>당신은 '알앤비'을 좋아하실겁니다.</h2>
+            <h2>당신은 '팝'을 좋아하실겁니다.</h2>
         </div>
         <div className="Playlist">
             <h3>이 노래를 들어보세요!!</h3>
@@ -43,31 +76,34 @@ const Pop = () => {
             align='stretch'
             >
             <Box>
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={DancePop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
-                    댄스팝 <button>장르설명</button>
+                    댄스팝 <button>장르설명</button> 
                 </div>
             </Box>
+            <Flex alignItems="center" justifyContent="flex-start">
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={ElecPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     일렉트로닉팝 <button>장르설명</button>
                 </div>
             </Box>
+            <img src="./play.png" alt="p"/>
+            </Flex>
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={BritPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     브릿팝 <button>장르설명</button>
                 </div>
             </Box>
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={IndiPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     인디팝 <button>장르설명</button>
                 </div>
             </Box>
             <Box >
-                <Progress value={45} size='lg' colorScheme='blue'/>
+                <Progress value={LatinPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     라틴팝 <button>장르설명</button>
                 </div>
