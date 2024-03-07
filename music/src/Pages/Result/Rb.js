@@ -76,30 +76,45 @@ const Rb = () => {
                 <Progress value={NeoRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     네오소울 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MYDejvhbWZoWsq6gd1ttD20'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={ComtemRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     컨템포러리 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MY2BZBQY_JBa2N6FraJL0su'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={PunkRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     펑크 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MYyy_jgPMM_gkmG3LJgdJ_G'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={SoulRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     소울 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MZyhmm-4g_T2xdeSrQJ6r0O'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={AlterRb} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     얼터너티브 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MblTfvFXrghM3DHYXyAkiG0'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
         </VStack>

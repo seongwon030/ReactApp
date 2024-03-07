@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import "./Result.css";
 
-import { ChakraProvider,VStack,Box,StackDivider, Flex } from "@chakra-ui/react";
+import { ChakraProvider,VStack,Box,StackDivider } from "@chakra-ui/react";
 import { Progress } from "@chakra-ui/progress";
 import { PopValueState } from "../../Components/PopBox";
 import { useRecoilValue } from "recoil";
 
 const Pop = () => {
-
+     
     const PopValue = useRecoilValue(PopValueState);
 
 
@@ -41,7 +41,7 @@ const Pop = () => {
         };
     };
 
-    console.log("전체값 : ",Total);
+    // 서브장르당 비율 계산 
     DancePop = parseInt(DancePop / Total * 100);
     ElecPop = parseInt(ElecPop / Total * 100);
     IndiPop = parseInt(IndiPop / Total * 100);
@@ -79,33 +79,45 @@ const Pop = () => {
                 <Progress value={DancePop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     댄스팝 <button>장르설명</button> 
+                    <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MY-2SwIhakiK3khw88oHzwc'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
-            <Flex alignItems="center" justifyContent="flex-start">
-            <Box >
+            <Box>
                 <Progress value={ElecPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     일렉트로닉팝 <button>장르설명</button>
+                    <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Mai4CdplvjIRFf-znKkJ7_l'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
-            <img src="./play.png" alt="p"/>
-            </Flex>
             <Box >
                 <Progress value={BritPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     브릿팝 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Mbfvh0blv_vISpJ5lqZUlZy'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={IndiPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     인디팝 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Mbf-zGpf43gE5pfW8_ycXnR'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={LatinPop} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     라틴팝 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MaAWCbd2HcokoqH5sv44OJP'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
         </VStack>

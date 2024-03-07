@@ -78,6 +78,9 @@ const Hip = () => {
                 <Progress value={DrillHip} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     드릴 <button>장르설명</button> 
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Ma9DKt1sslE4gieQcTHhRwr'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box>
@@ -85,7 +88,7 @@ const Hip = () => {
                 <div className="Sub">
                     트랩 <button>장르설명</button>
                     <button className="btn"
-                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Mai4CdplvjIRFf-znKkJ7_l'}
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MYL6EFzJvB0MR0L5mJIwLFf'}
                     ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
@@ -93,18 +96,27 @@ const Hip = () => {
                 <Progress value={AlterHip} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     얼터너티브 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MZyq1Ry3FaRHdmkcI6f5BHK'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={RageHip} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     레이지 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MbKaetJvGbjuo194EI9OfXi'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={BoomHip} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     붐뱁 <button>장르설명</button>
+                    <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MaSwB65jkuc1vDC0BWsmpRvhttps://www.youtube.com/playlist?list=PLCqnvhwU67MaSwB65jkuc1vDC0BWsmpRv'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
         </VStack>

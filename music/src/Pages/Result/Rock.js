@@ -71,13 +71,16 @@ const Rock = () => {
         <VStack
             className="Stack"
             divider={<StackDivider borderColor='gray.300' />}
-            spacing={5}
+            spacing={3}
             align='stretch'
             >
             <Box>
                 <Progress value={ProRock} size='lg' colorScheme='blue'/>
                 <div className="Sub">
-                    프로그레시브 <button>장르설명</button> 
+                    프로그레시브 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MZUIbKyS_2yQJ2JPZPSrzO0'}
+                    ><img className="music" src="./Music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box>
@@ -85,26 +88,35 @@ const Rock = () => {
                 <div className="Sub">
                     헤비 <button>장르설명</button>
                     <button className="btn"
-                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Mai4CdplvjIRFf-znKkJ7_l'}
-                    ><img className="music" src="./music.png" alt="p"/></button>
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Mabu4H5mTkcfBopJhvYqLYZ'}
+                    ><img className="music" src="./Music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={AlterRock} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     얼터너티브 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MbTbdOhM-X-OLPTs18AsV3s'}
+                    ><img className="music" src="./Music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={PunkRock} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     펑크 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MbB05x1nVG1wAGYp9lyW_sZ'}
+                    ><img className="music" src="./Music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={ShowRock} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     쇼 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MZ9gE5dJgB9lO_tbSNK6m59'}
+                    ><img className="music" src="./Music.png" alt="p"/></button>
                 </div>
             </Box>
         </VStack>

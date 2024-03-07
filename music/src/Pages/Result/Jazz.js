@@ -78,6 +78,9 @@ const Jazz = () => {
                 <Progress value={LatinJazz} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     라틴 <button>장르설명</button> 
+                <button className="btn"
+                        onClick={() => window.location.href = 'hhttps://www.youtube.com/playlist?list=PLCqnvhwU67MYz-ulK000LqaLp6XPVVD6s'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box>
@@ -85,7 +88,7 @@ const Jazz = () => {
                 <div className="Sub">
                     스윙 <button>장르설명</button>
                     <button className="btn"
-                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67Mai4CdplvjIRFf-znKkJ7_l'}
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MYu0VZR6fElTGZLEeq5olcL'}
                     ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
@@ -93,18 +96,27 @@ const Jazz = () => {
                 <Progress value={SoulJazz} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     소울 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MYDB57IXkCJN8NiMLeq0xmM'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={FreeJazz} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     프리 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MaS65mSke-ouu9Nz5PJLLXw'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
             <Box >
                 <Progress value={BibobJazz} size='lg' colorScheme='blue'/>
                 <div className="Sub">
                     비밥 <button>장르설명</button>
+                <button className="btn"
+                        onClick={() => window.location.href = 'https://www.youtube.com/playlist?list=PLCqnvhwU67MaWk1QneIEshUvxCa9aBKEv'}
+                    ><img className="music" src="./music.png" alt="p"/></button>
                 </div>
             </Box>
         </VStack>
