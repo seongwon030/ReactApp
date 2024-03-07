@@ -69,7 +69,7 @@ const Rb = () => {
         <VStack
             className="Stack"
             divider={<StackDivider borderColor='gray.300' />}
-            spacing={5}
+            spacing={3}
             align='stretch'
             >
             <Box>
